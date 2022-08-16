@@ -10,6 +10,9 @@ body {
 	background-color: var(--c-lighter);
 }
 
+.font-largest {
+	font-size: 3em;
+}
 
 /* ||-（左）侧边栏 */
 #asideBar {
@@ -18,6 +21,7 @@ body {
 	align-items: center;
 
 	position: fixed;
+	z-index: 999;
 	left: 0;
 	top: 0;
 	bottom: 0;
@@ -69,20 +73,67 @@ a {
 
 /* ||-主要窗口 */
 #mainWindow {
+	position: relative;
 	min-width: 100%;
+	height: fit-content;
+}
+
+.section {
+	position: relative;
 	height: 100vh;
-}
-
-#mainWindow>section {
-	padding-top: 20px;
 	padding-left: 100px;
-}
-
-#section_1 {
-	background-image: url('../asset/image/bg-snowMounts.jpg');
+	padding-right: 30px;
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
-	color: var(--c-light);
-	height: 100%;
+}
+
+#section_1 {
+	/* background-color: #74EBD5; */
+	background-image: -webkit-linear-gradient(121deg, #74EBD5 0%, #9FACE6 100%);
+	background-image: -moz-linear-gradient(121deg, #74EBD5 0%, #9FACE6 100%);
+	background-image: -o-linear-gradient(121deg, #74EBD5 0%, #9FACE6 100%);
+	background-image: linear-gradient(121deg, #74EBD5 0%, #9FACE6 100%);
+	background-image: url('../asset/image/bg-snowMounts.jpg');
+}
+
+#selfIntroduction {
+	position: relative;
+	top: 50%;
+
+	box-sizing: border-box;
+
+	width: fit-content;
+	padding: 2em 2em;
+	margin: 0 auto;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	border-radius: 20px;
+
+	transform: translateY(-50%);
+
+	backdrop-filter: blur(5px);
+	box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.3);
+
+	text-align: center;
+}
+
+#selfIntroduction>p{
+	margin: 10px auto;
+}
+
+.text-color {
+	background: linear-gradient(-90deg, #1CB5E0 0%, #000851 100%);
+	background-clip: text;
+	-webkit-background-clip: text;
+	color: transparent;
+}
+
+.tag {
+	background-color: var(--c-medium);
+	color: #fff;
+	padding: 2px 6px;
+	border-radius: 6px;
+	font-size: .8em;
+	font-weight: 400;
+	letter-spacing: 2px;
 }
