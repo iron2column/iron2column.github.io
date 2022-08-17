@@ -8,6 +8,8 @@
 	<title>iron2column</title>
 	<link rel="stylesheet" href="./style/style.css">
 	<link rel="stylesheet" href="./style/scheme_basic.css">
+	<link rel="stylesheet" href="./style/3d.css">
+	<link rel="stylesheet" href="./style/section_1.css">
 </head>
 
 <body>
@@ -16,27 +18,54 @@
 		<div id="head_portrait">
 			<img src="./asset/image/head-portrait/head_portrait-2.jpeg" alt="">
 		</div>
+
+		<nav>
+			<ul>
+				<li>Home</li>
+				<li>Works</li>
+			</ul>
+		</nav>
+
+		</div>
 		<ul class="links">
 			<li><a target="_blank" href="https://github.com/iron2column"><abbr title="Github">G</abbr></a></li>
-			<li><a target="_blank" href="https://codepen.io/your-work/"><abbr title="CodePen">C</abbr
-						title="CodePen"></a></li>
+			<li><a target="_blank" href="https://codepen.io/your-work/"><abbr title="CodePen">C</abbr></a></li>
 		</ul>
 	</aside>
 
 	<main id="mainWindow">
+
 		<section id="section_1" class="section">
-			<div id="selfIntroduction">
-				<h1 class="font-largest text-color">@iron2column</h1>
-				<p>
-					<span class="tag">前端工程师</span>
-				</p>
+			<div id="scene_flip-cards" class="scene">
+				<div id="work_flip-cards" class="work">
+
+					<div id="selfIntroduceA" class="element_card-front sheet_card text-align flex-column">
+						<h1 class="text-color font-largest">@iron2column</h1>
+						<span class="tag">前端开发工程师</span>
+					</div>
+
+					<div id="selfIntroduceB" class=" element_card-back sheet_card">
+						<u>@iron2column</u>是一名软件工程师，当前以前端为主要研究方向
+					</div>
+
+				</div>
 			</div>
 		</section>
+
 		<section id="section_2" class="section">
-			<h1 class="title">PartII 即将到来...</h1>
+			<div id="workspace">
+				<h1 class="title">PartII 即将到来...</h1>
+
+			</div>
 		</section>
 	</main>
 
+	<script>
+		document.getElementById('work_flip-cards').addEventListener('click', (event) => {
+			var cardFront = document.getElementById('selfIntroduceA').classList.toggle('flipping-front');
+			var cardBack = document.getElementById('selfIntroduceB').classList.toggle('flipping-back');
+		})
+	</script>
 </body>
 
 </html>

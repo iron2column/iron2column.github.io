@@ -72,14 +72,16 @@ a {
 	border-radius: 5px;
 	padding: 0 4px;
 
-	color: #000;
 	background-color: var(--c-lighter);
 }
 
 .links li:hover {
-	background-color: var(--c-dark);
-	color: #fff;
+	background-color: var(--c-medium);
+	transition: background-color .4s ease-in-out;
+}
 
+.links li:hover a {
+	color: #fff;
 	transition: background-color .4s ease-in-out;
 }
 
@@ -100,54 +102,4 @@ a {
 	background-size: cover;
 }
 
-#section_1 {
-	/* background-color: #74EBD5; */
-	background-image: -webkit-linear-gradient(121deg, #74EBD5 0%, #9FACE6 100%);
-	background-image: -moz-linear-gradient(121deg, #74EBD5 0%, #9FACE6 100%);
-	background-image: -o-linear-gradient(121deg, #74EBD5 0%, #9FACE6 100%);
-	background-image: linear-gradient(121deg, #74EBD5 0%, #9FACE6 100%);
-	background-image: url('../asset/image/bg-snowMounts.jpg');
-}
 
-#selfIntroduction {
-	position: relative;
-	top: 50%;
-
-	display: flex;
-	flex-direction: column;
-	justify-content: space-evenly;
-
-	box-sizing: border-box;
-
-	width: 70%;
-	min-width: 500px;
-	height: 250px;
-	padding: 2em 2em;
-	margin: 0 auto;
-	border: 1px solid rgba(0, 0, 0, 0.1);
-	border-radius: 20px;
-
-	transform: translateY(-50%);
-
-	backdrop-filter: blur(5px);
-	box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.3);
-
-	text-align: center;
-}
-
-.text-color {
-	background: linear-gradient(-90deg, #1CB5E0 0%, #000851 100%);
-	background-clip: text;
-	-webkit-background-clip: text;
-	color: transparent;
-}
-
-.tag {
-	background-color: var(--c-medium);
-	color: #fff;
-	padding: 2px 6px;
-	border-radius: 6px;
-	font-size: .8em;
-	font-weight: 400;
-	letter-spacing: 2px;
-}
