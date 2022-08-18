@@ -7,9 +7,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>iron2column</title>
 	<link rel="stylesheet" href="./style/style.css">
-	<link rel="stylesheet" href="./style/scheme_basic.css">
 	<link rel="stylesheet" href="./style/3d.css">
-	<link rel="stylesheet" href="./style/section_1.css">
+	<link rel="stylesheet" href="./style/scheme_basic.css">
+	<link rel="stylesheet" href="./style/sections/home.css">
+	<script src="https://kit.fontawesome.com/c0458c68bb.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -19,23 +20,29 @@
 			<img src="./asset/image/head-portrait/head_portrait-2.jpeg" alt="">
 		</div>
 
-		<nav>
-			<ul>
-				<li>Home</li>
-				<li>Works</li>
+		<nav id="asideBarNav">
+			<ul class="ul-asideBarNav">
+				<li class="ul-asideBarNav-li ul-asideBarNav-li_activate ">
+					<a href="#Home"><abbr title="Home"><i class="fa-solid fa-house"></i></abbr></a>
+				</li>
+				<li class="ul-asideBarNav-li">
+					<a href="#Works"><abbr title="Works"><i class="fa-solid fa-laptop-code"></i></abbr></a>
+				</li>
 			</ul>
 		</nav>
 
 		</div>
 		<ul class="links">
-			<li><a target="_blank" href="https://github.com/iron2column"><abbr title="Github">G</abbr></a></li>
-			<li><a target="_blank" href="https://codepen.io/your-work/"><abbr title="CodePen">C</abbr></a></li>
+			<li><a target="_blank" href="https://github.com/iron2column"><abbr title="Github"><i
+							class="fa-brands fa-github"></i></abbr></a></li>
+			<li><a target="_blank" href="https://codepen.io/your-work/"><abbr title="CodePen"><i
+							class="fa-brands fa-codepen"></i></abbr></a></li>
 		</ul>
 	</aside>
 
 	<main id="mainWindow">
 
-		<section id="section_1" class="section">
+		<section id="Home" class="section">
 			<div id="scene_flip-cards" class="scene">
 				<div id="work_flip-cards" class="work">
 
@@ -52,12 +59,13 @@
 			</div>
 		</section>
 
-		<section id="section_2" class="section">
+		<section id="Works" class="section">
 			<div id="workspace">
 				<h1 class="title">PartII 即将到来...</h1>
 
 			</div>
 		</section>
+		
 	</main>
 
 	<script>
