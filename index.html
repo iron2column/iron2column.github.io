@@ -12,9 +12,9 @@
 	<link rel="stylesheet" href="./styles/3d.css">
 	<link rel="stylesheet" href="./styles/works.css">
 	<script src="https://kit.fontawesome.com/c0458c68bb.js" crossorigin="anonymous"></script>
-	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png">
 	<link rel="manifest" href="/site.webmanifest">
 </head>
 
@@ -90,12 +90,9 @@
 			asideBarNavLis.forEach(li=>li.classList.remove('ul-asideBarNav-li_activate'));
 
 			// 为当前楼层li添加激活样式
-			asideBarNavLis[floorIndex].classList.add('ul-asideBarNav-li_activate');
+			asideBarNavLis[floorIndex].classList.add('ul-asideBarNav-li_activate')
 
 		})
-
-		
-		console.log(asideBarNavLis);
 
 		function computeFloorNumber(scrollTop, fixedHeight) {
 			var fixedHeight = fixedHeight || window.innerHeight;

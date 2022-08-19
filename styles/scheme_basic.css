@@ -9,6 +9,7 @@
 body {
 	background-color: var(--c-lighter);
 	min-width: 700px;
+	/* TODO:设置最小高度以免页面变形 */
 }
 
 a {
