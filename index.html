@@ -26,7 +26,6 @@
 		</div>
 
 		<nav id="asideBarNav">
-			<!-- TODO: 楼层滚动样式变化 -->
 			<ul class="ul-asideBarNav">
 				<li class="ul-asideBarNav-li ul-asideBarNav-li_activate ">
 					<a href="#Home"><abbr title="Home"><i class="fa-solid fa-house"></i></abbr></a>
@@ -79,6 +78,29 @@
 			var cardFront = document.getElementById('selfIntroduceA').classList.toggle('flipping-front');
 			var cardBack = document.getElementById('selfIntroduceB').classList.toggle('flipping-back');
 		})
+
+		var mainWindow = document.getElementById('mainWindow');
+		mainWindow.addEventListener('scroll', event => {
+			// 获取楼层数
+			var floor = computeFloorNumber(event.currentTarget.scrollTop, window.innerHeight);
+			var floorIndex = floor-1;
+
+			// 清除所有li的激活样式
+			var asideBarNavLis =  document.getElementById('asideBarNav').querySelectorAll('li');
+			asideBarNavLis.forEach(li=>li.classList.remove('ul-asideBarNav-li_activate'));
+
+			// 为当前楼层li添加激活样式
+			asideBarNavLis[floorIndex].classList.add('ul-asideBarNav-li_activate');
+
+		})
+
+		
+		console.log(asideBarNavLis);
+
+		function computeFloorNumber(scrollTop, fixedHeight) {
+			var fixedHeight = fixedHeight || window.innerHeight;
+			return Math.floor(scrollTop / fixedHeight) + 1;
+		}
 	</script>
 </body>
 

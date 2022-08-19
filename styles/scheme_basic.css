@@ -11,6 +11,11 @@ body {
 	min-width: 700px;
 }
 
+a {
+	color: #000;
+	font-weight: bold;
+}
+
 .font-largest {
 	font-size: 3em;
 }
@@ -42,6 +47,7 @@ body {
 	opacity: 0.9;
 }
 
+/* 1-头像区 */
 #head_portrait {
 	width: 30px;
 	height: 30px;
@@ -56,11 +62,65 @@ body {
 	transform: translate(0, -25%)
 }
 
-a {
-	color: #000;
-	font-weight: bold;
+/* 2-导航区 */
+.ul-asideBarNav {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
 }
 
+.ul-asideBarNav-li {
+	position: relative;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	width: 35px;
+	height: 35px;
+	border-radius: 8px;
+	margin-bottom: 3em;
+
+	background-color: rgba(255, 255, 255, 0.5);
+	box-shadow: 0 0 5px rgba(0, 0, 0, .5);
+	opacity: 0.5;
+	transition: 1s;
+}
+
+.ul-asideBarNav-li::after {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	height: 0%;
+	width: 100%;
+	border-radius: 8px;
+
+	background-color: #fff;
+	transition: .5s;
+}
+
+.ul-asideBarNav-li_activate {
+	position: relative;
+	transition: .2s;
+	opacity: 1;
+}
+
+.ul-asideBarNav-li_activate::after {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	z-index: -1;
+
+	height: 100%;
+	width: 100%;
+	border-radius: 8px;
+
+	background-color: #fff;
+	transition: .5s;
+}
+
+/* 3-外链区 */
 .links {
 	margin: 20px;
 }
@@ -100,28 +160,4 @@ a {
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
-}
-
-.ul-asideBarNav {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: space-evenly;
-}
-
-.ul-asideBarNav-li {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: 35px;
-	height: 35px;
-	margin-bottom: 3em;
-	background-color: rgba(255, 255, 255, 0.5);
-	border-radius: 8px;
-	opacity: 0.5;
-}
-
-.ul-asideBarNav-li_activate {
-	background-color: rgba(255, 255, 255, 1);
-	opacity: 1;
 }
